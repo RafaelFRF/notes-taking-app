@@ -46,8 +46,25 @@ func main() {
 	}
 }
 
-// func printSomething(value interface{}) {
-func printSomething(value any) {
+// Accepting any type of variables
+// func printSomething(value any) {
+func printSomething(value interface{}) {
+	// A way to check the value type
+	// intVal, ok := value.(int)
+	// if ok {
+	// 	fmt.Println("Integer:", intVal)
+	// 	return
+	// }
+	// floatVal, ok := value.(float64)
+	// if ok {
+	// 	fmt.Println("Integer:", floatVal)
+	// 	return
+	// }
+	// stringVal, ok := value.(string)
+	// if ok {
+	// 	fmt.Println("Integer:", stringVal)
+	// 	return
+	// }
 	switch value.(type) {
 	case int:
 		fmt.Println("Integer:", value)
